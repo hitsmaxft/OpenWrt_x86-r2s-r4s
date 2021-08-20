@@ -1,0 +1,4 @@
+uci del network.lan.ipaddr
+uci del network.lan.netmask
+uci del network.lan.ip6assign
+uci set network.lan.proto='dhcp'

@@ -1,0 +1,19 @@
+uci del network.lan.ipaddr
+uci del network.lan.netmask
+uci del network.lan.ip6assign
+
+#uci set network.lan.proto='dhcp'
+
+uci set network.lan.proto='static'
+uci set network.lan.ipaddr='192.168.1.16'
+uci set network.lan.netmask='255.255.0.0'
+uci set network.lan.gateway='192.168.1.1'
+
+uci del network.lan.dns
+uci add_list network.lan.dns='192.168.1.1'
+uci add_list network.lan.dns='223.5.5.5'
+
+uci set system.led_lan.sysfs='nanopi-r2s:green:lan'
+uci set system.led_wan.sysfs='nanopi-r2s:green:wan'
+uci set dhcp.lan.ignore='1'
+
